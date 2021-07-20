@@ -1,0 +1,18 @@
+body {
+    background-color: wheat;
+}
+
+ 
+h1 {
+    color: red;
+    font-size: 30px;
+    transition: color .5s ease-in-out;
+}
+
+.clicked {
+    color: teal;
+}
+
+.btn {
+    cursor: pointer;
+}
