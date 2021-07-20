@@ -1,1 +1,1 @@
-# clockWebsite
+# Just for JavaScript practice
