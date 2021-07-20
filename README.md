@@ -1,1 +1,1 @@
-# Just for JavaScript practice
+## Just for JavaScript practice
