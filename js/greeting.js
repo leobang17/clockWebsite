@@ -13,7 +13,9 @@ function saveName(name) {
 }
 
 function eraseName() {
-    localStorage.clear();
+    localStorage.removeItem(USER_LS);
+    form.classList.add(SHOWING_CN);
+    greeting.classList.remove(SHOWING_CN);
 }
 
 function handleSubmit(event){
@@ -61,7 +63,8 @@ function loadName() {
         askForName();
     }
     else {
-        paintGreeting(currentUser);
+        paintGreeting(currentUser);    
+        ifClickEraseName();
     }
 }
 
