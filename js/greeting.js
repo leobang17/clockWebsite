@@ -1,6 +1,9 @@
 const form = document.querySelector(".js-form");
 const input = document.querySelector("input");
 const greeting = document.querySelector(".js-greetings");
+const date = new Date();
+const hour = date.getDate();
+
 
 const USER_LS = "currentUser";
 const SHOWING_CN = "showing";
@@ -23,7 +26,6 @@ function handleSubmit(event){
 
 function handleClick(){
     eraseName();
-    console.log("fuck you");
 }
 
 function ifClickEraseName(){
@@ -38,7 +40,18 @@ function askForName(){
 function paintGreeting(textArg){
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN, "pointer");
-    greeting.innerText = `Hello ${textArg}`;
+    if (hour >= 5 && hour < 11){
+        greeting.innerText = `Good Morning, ${textArg}.`;
+    }
+    else if (hour >= 11 && hour < 5) {
+        greeting.innerText = `Good Afternoon, ${textArg}.`;
+    }
+    else if (hour >= 5 && hour < 10) {
+        greeting.innerText = `Good Evening, ${textArg}.`;
+    } 
+    else {
+        greeting.innerText = `Good Night, ${textArg}.`;
+    }
 }
 
 function loadName() {
@@ -55,7 +68,6 @@ function loadName() {
 
 function init(){
     loadName();
-
 }
 
 init();

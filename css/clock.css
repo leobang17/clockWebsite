@@ -1,16 +1,58 @@
-.js-clock {
-    display: flex;
-    margin: 200px;
-    /* align-items: center; */
+html {
+    font-size: 10px;
+    font-family: sans-serif;
 }
 
-.js-clock h1 {
-    font-size: 40px;
-    color: teal;
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+}
+
+.js-clock {
+    margin: 17% auto 2% auto;
+}
+
+.clock-title  {
+    font-size: 8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-field {
+    margin-bottom: 3rem;
+}
+
+.js-form input {
+    width: 25rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: none;
+    background-color:white;
+    text-align: center;
+    line-height: 4rem;
+    outline: none;
+    font-size: 2rem;
+}
+
+.js-form input::placeholder{
+    color: black;
+    opacity: 1;
 }
 
 .form, .greetings {
     display: none;
+}
+
+.js-greetings {
+    font-size: 3rem;
+    color: white;
 }
 
 .showing {
@@ -31,6 +73,7 @@
 }
 
 .bgImage {
+    display: none;
     position: absolute;
     top: 0; 
     left: 0;

@@ -1,5 +1,5 @@
 const clockContainer = document.querySelector(".js-clock");
-const clockTitle = clockContainer.querySelector("h1");
+const clockTitle = clockContainer.querySelector(".clock-title");
 
 function putZeroOnTime(timeValue){
     if (timeValue < 10){
@@ -18,7 +18,7 @@ function getTime() {
     // clockTitle.innerText = `${
     //     hours < 10? `0${hours}` : hours} : ${minutes} : ${
     //     seconds < 10 ? `0${seconds}` : seconds}`;
-    clockTitle.innerText = `${putZeroOnTime(hours)} : ${putZeroOnTime(minutes)} : ${putZeroOnTime(seconds)}`
+    clockTitle.innerText = `${putZeroOnTime(hours)}:${putZeroOnTime(minutes)}:${putZeroOnTime(seconds)}`;
 }
 
 
