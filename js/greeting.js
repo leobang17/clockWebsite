@@ -14,8 +14,10 @@ function saveName(name) {
 
 function eraseName() {
     localStorage.removeItem(USER_LS);
-    form.classList.add(SHOWING_CN);
-    greeting.classList.remove(SHOWING_CN);
+    // form.classList.add(SHOWING_CN);
+    // greeting.classList.remove(SHOWING_CN);
+    // form.value("");
+    window.location.reload();
 }
 
 function handleSubmit(event){
@@ -63,14 +65,14 @@ function loadName() {
         askForName();
     }
     else {
-        paintGreeting(currentUser);    
-        ifClickEraseName();
+        paintGreeting(currentUser);
     }
 }
 
 
 function init(){
     loadName();
+    ifClickEraseName();
 }
 
 init();
